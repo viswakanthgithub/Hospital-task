@@ -1,14 +1,9 @@
-var mongoose = require('mongoose');
+var mongoose = require ('mongoose');
+
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://viswakanth17:L9YAEttbaiiOwmDY@cluster0.qfy3xik.mongodb.net/?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => {
-  console.log('Connected to MongoDB successfully!');
-})
-.catch((error) => {
-  console.error('Error connecting to MongoDB:', error.message);
-});
-module.exports = { mongoose };
+
+//change the database with yours
+mongoose.connect("mongodb+srv://viswakanth17:L9YAEttbaiiOwmDY@cluster0.qfy3xik.mongodb.net/?retryWrites=true&w=majority");
+
+module.exports = {mongoose};
